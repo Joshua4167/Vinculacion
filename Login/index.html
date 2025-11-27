@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Seguro por Roles</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+
+    <div
+      class="login-container"
+      style="
+        background-image: url('imagen/LogoPuce.png');
+        background-size: 450px;      
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        padding-top: 100px; /* ← ELEMENTOS MÁS ARRIBA */
+      "
+    >
+      
+      <h2 class="titulo-login">
+        <span class="icon">🔐</span> Acceso Seguro
+      </h2>
+
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Usuario</label>
+          <input type="text" id="username" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" required />
+        </div>
+
+        <div class="input-group">
+          <label for="role">Rol</label>
+          <select id="role" required>
+            <option value="" disabled selected>Seleccione su rol</option>
+            <option value="admin">Administrador</option>
+            <option value="nutricionista">Nutricionista</option>
+            <option value="fisioterapeuta">Fisioterapeuta</option>
+          </select>
+        </div>
+        
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+
+      <p id="status-message"></p>
+    </div>
+
+    <script src="formulario.js"></script>
+  </body>
+</html>
